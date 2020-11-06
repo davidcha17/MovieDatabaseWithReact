@@ -21,42 +21,56 @@ function App() {
 
     <div>
       <h1>Movie Front Page</h1>
-      <Flex>
-        <Spacer />
+      {/* <Flex bg="grey"> */}
+      <Box p="4"
+      mr="6"
+      ml="6" 
+      maxW="mx"
+      display="flex" 
+      alignItems="center"
+      justifyContent="space-between" 
+      border="1px"
+      borderRadius="lg"
+      borderColor="blue"
+      >
+      {/* this part is to create the container that will hold the movies */}
+
+        {/* <Spacer /> */}
         <Box maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden">
           <Image src={movieCard.imageUrl} alt={movieCard.imageAlt} />
 
-          <Box mt="1"
-            fontWeight="semibold"
-            as="h4"
-            lineHeight="tight"
-            isTruncated 
-          >
-          {/* intellisense = ctrl + space */}
-            {movieCard.movieTitle}
-          </Box>
+          <Box p="6" >
+            {/* <Box d="flex" alignItems="baseline"> */}
+              <Box mt="1"
+                fontWeight="semibold"
+                as="h4"
+                lineHeight="tight"
+                isTruncated 
+              >
+              {/* intellisense = ctrl + space */}
+                {movieCard.movieTitle} ({movieCard.year})
+              </Box>
 
-          <Box>
-            {movieCard.year}
-          </Box> 
-
-          <Box d="flex" mt="2" alignItems="center">
-            {Array(10)
-            .fill("")
-            .map(( _ , i ) => (
-              <StarIcon
-                key={i}
-                color={i < movieCard.rating ? "teal.500" : "gray.300" }
-              />
-            ))}
-            <Box as="span" ml="2" color="gray.600" fontSize="sm">
-              {movieCard.rating} reviews
+              <Box d="flex" mt="2" alignItems="center">
+                {Array(10)
+                .fill("")
+                .map(( _ , i ) => (
+                  <StarIcon
+                    key={i}
+                    color={i < movieCard.rating ? "teal.500" : "gray.300" }
+                  />
+                ))}
+                <Box as="span" ml="2" color="gray.600" fontSize="sm">
+                  {movieCard.rating} rating
+                </Box>
+              {/* </Box> */}
             </Box>
           </Box>
         </Box>
+        {/* lines 36 to 66 holds information about a singular movie component */}
           <Spacer />
 
-        {/* <Box> 
+        <Box> 
         <Image src={movieCard.imageUrl} alt={movieCard.imageAlt} />
           <Box w="150px" h="80px" >
             Movie 2
@@ -64,7 +78,7 @@ function App() {
         </Box>
           <Spacer />
 
-        <Box>
+        {/* <Box>
         <Image src={movieCard.imageUrl} alt={movieCard.imageAlt} />
           <Box w="150px" h="80px" >
             Movie 3
@@ -87,7 +101,8 @@ function App() {
             </Box>  
           </Box>
             <Spacer /> */}
-      </Flex>
+      </Box>
+      {/* </Flex> */}
     </div>
 
   );
