@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 
-import { Box, Flex, Image, Spacer } from "@chakra-ui/core";
+import { Box, Flex, Heading, Image, Spacer } from "@chakra-ui/core";
 // able to utilize flexbox from charka
 
 import { StarIcon } from '@chakra-ui/icons'
@@ -20,7 +20,7 @@ function App() {
   return (
 
     <div>
-      <h1>Movie Front Page</h1>
+      <Heading>Movie Home Page</Heading>
       {/* <Flex bg="grey"> */}
       <Box p="4"
       mr="6"
@@ -29,7 +29,7 @@ function App() {
       display="flex" 
       alignItems="center"
       justifyContent="space-between" 
-      border="1px"
+      borderWidth="5px"
       borderRadius="lg"
       borderColor="blue"
       >
@@ -78,15 +78,15 @@ function App() {
         </Box>
           <Spacer />
 
-        {/* <Box>
+        <Box>
         <Image src={movieCard.imageUrl} alt={movieCard.imageAlt} />
           <Box w="150px" h="80px" >
             Movie 3
           </Box> 
         </Box>
-          <Spacer />
+          {/* <Spacer /> */}
           
-          <Box>
+          {/* <Box>
           <Image src={movieCard.imageUrl} alt={movieCard.imageAlt} />
             <Box w="150px" h="80px" >
               Movie 4
