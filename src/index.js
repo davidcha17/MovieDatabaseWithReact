@@ -8,7 +8,8 @@ import { ChakraProvider } from "@chakra-ui/core"
 // css framework for react
 
 import { extendTheme } from "@chakra-ui/core"
-// initial theme
+// this is optional for when we want to add something else to the theme of our project
+
 
 ReactDOM.render(
   <ChakraProvider>

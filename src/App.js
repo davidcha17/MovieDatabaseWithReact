@@ -1,8 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
 
-import { Box, Flex, Icon, Image, Spacer } from "@chakra-ui/core";
+import { Box, Flex, Image, Spacer } from "@chakra-ui/core";
 // able to utilize flexbox from charka
+
+import { StarIcon } from '@chakra-ui/icons'
+
 
 function App() {
 
@@ -41,7 +44,7 @@ function App() {
             {Array(10)
             .fill("")
             .map(( _ , i ) => (
-              <StarIcon name="star"
+              <StarIcon
                 key={i}
                 color={i < movieCard.rating ? "teal.500" : "gray.300" }
               />
