@@ -4,12 +4,12 @@ import React from 'react'
 import { Box, Flex, Heading, Image, Spacer } from "@chakra-ui/core";
 import { StarIcon } from '@chakra-ui/icons';
 
-import MovieCard from './Movie'
+import MovieCardComponent from './Movie'
 
 function MoviesContainer({movieCard}) {
 
     // console.log(movieCard.imageUrl)
-    // console.log(movieCard)
+    console.log(movieCard)
 
     return (
         <Box p="4"
@@ -25,12 +25,14 @@ function MoviesContainer({movieCard}) {
           >
           {/* this part is to create the container that will hold the movies */}
 
-            <MovieCard>
-                {movieCard={movieCard}}
-            </MovieCard>
+            <MovieCardComponent movieCard={movieCard} >
+                movieCard={movieCard}
+            </MovieCardComponent>
 
           </Box> 
     )
 }
+
+// for testing, I need to map out the components. Gotta pass the fetch to movies container then map out each instance.
 
 export default MoviesContainer

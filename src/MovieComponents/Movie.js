@@ -1,11 +1,12 @@
 import React from 'react'
 
-import { Box, Flex, Heading, Image, Spacer } from "@chakra-ui/core";
+import { Box, Flex, Image, Spacer } from "@chakra-ui/core";
 import { StarIcon } from '@chakra-ui/icons';
 
-function MovieCard({movieCard}) {
+function MovieCardComponent({movieCard}) {
 
     console.log(movieCard)
+    // passing props down to the singular component does not render or pass
 
     return(
         <div>
@@ -79,4 +80,24 @@ function MovieCard({movieCard}) {
     )
 }
 
-export default MovieCard
+// {
+//   "popularity": 2766.111,
+//   "vote_count": 62,
+//   "video": false,
+//   "poster_path": "/ugZW8ocsrfgI95pnQ7wrmKDxIe.jpg",
+//   "id": 724989,
+//   "adult": false,
+//   "backdrop_path": "/86L8wqGMDbwURPni2t7FQ0nDjsH.jpg",
+//   "original_language": "en",
+//   "original_title": "Hard Kill",
+//   "genre_ids": [
+//     28,
+//     53
+//   ],
+//   "title": "Hard Kill",
+//   "vote_average": 4.4,
+//   "overview": "The work of billionaire tech CEO Donovan Chalmers is so valuable that he hires mercenaries to protect it, and a terrorist group kidnaps his daughter just to get it.",
+//   "release_date": "2020-10-23"
+// }
+// this is the available instance from a singular movie card, what we need for this is poster_path, title, vote_average, overview, release_date
+export default MovieCardComponent

@@ -36,8 +36,8 @@ class App extends React.Component {
       rating: "8"
     }
     
-    console.log(movieCard, "movie test card")
-    
+    // console.log(movieCard, "movie test card")
+
     return (
       
         <div>
