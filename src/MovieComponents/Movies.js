@@ -6,10 +6,11 @@ import { StarIcon } from '@chakra-ui/icons';
 
 import MovieCardComponent from './Movie'
 
-function MoviesContainer({movieCard}) {
+function MoviesContainer({movieCard, movies}) {
 
     // console.log(movieCard.imageUrl)
     console.log(movieCard)
+    console.log(movies, "this should be from the fetch")
 
     return (
         <Box p="4"
