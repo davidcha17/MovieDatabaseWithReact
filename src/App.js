@@ -24,6 +24,8 @@ class App extends React.Component {
       })
     })
   }
+
+  // now that the fetch is working, I need to be able to flip through pages
   
   render() {
     console.log(this.state.movies, "fetch a list of movies")
